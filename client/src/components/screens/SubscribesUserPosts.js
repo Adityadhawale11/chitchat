@@ -130,7 +130,7 @@ const Home=()=>{
                 >delete</i>}
                </h5>
                 <div className="card=image">
-                    <img src={item.photo}/>
+                    <img class="responsive-img" src={item.photo}/>
 
                 </div>
                 <div className="card-content">
