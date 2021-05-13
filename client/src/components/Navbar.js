@@ -8,19 +8,17 @@ const Navbar=()=>{
   const renderList=()=>{
     if(state){
         return[
+          
           <li><Link to="/profile">Profile</Link></li>,
           <li><Link to="/create">Create Post</Link></li>,
           <li><Link to="/myfollowingpost">My following posts</Link></li>,
           <li>
-            <button className="btn #c62828 red darken-3"
-              onClick={()=>{
+            <a className=" btn-small white-text red darken-2" onClick={()=>{
                 localStorage.clear()
                 dispatch({type:"CLEAR"})
                 history.push('/signin')
-              }}>
-                  Logout
-              
-                 </button>
+              }}><i class="material-icons left ">logout</i>logout</a>
+            
           </li>
         ]
     }
@@ -32,14 +30,25 @@ const Navbar=()=>{
     }
   }
     return(
+      
         <nav>
     <div className="nav-wrapper white">
       <Link to={state?"/":"/signin"} className="brand-logo left">Chit-chat</Link>
-      <ul id="nav-mobile" className="right">
+      <a href="#" data-target="mobile-demo" class="sidenav-trigger right"><i class="material-icons">menu</i></a>
+      <ul class="right hide-on-med-and-down">
        {renderList()}
       </ul>
+      
     </div>
+    <ul class="sidenav " id="mobile-demo">
+  {renderList()}
+  
+ </ul>
+
   </nav>
+
+ 
     )
+    
 }
 export default Navbar

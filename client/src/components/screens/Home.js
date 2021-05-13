@@ -129,8 +129,8 @@ const Home=()=>{
                 onClick={()=>deletePost(item._id)}
                 >delete</i>}
                </h5>
-                <div className="card=image">
-                    <img src={item.photo}/>
+                <div className="card=image ">
+                    <img class="responsive-img" src={item.photo}/>
 
                 </div>
                 <div className="card-content">

@@ -76,15 +76,15 @@ const Profile=()=>{
                
            }}>
                <div>
-                  <img style={{width:"160px",height:"160px",borderRadius:"80px"}}
+                  <img style={{width:"80px",height:"80px",borderRadius:"40px"}}
                   src={state?state.pic:"loading.."}
                   />
                   
                </div>
               
                <div>
-                  <h4>{state?state.name:"loading"}</h4>
-                  <h5>{state?state.email:"loading"}</h5>
+                  <h5>{state?state.name:"loading"}</h5>
+                  <h6>{state?state.email:"loading"}</h6>
                   <div style={{display:"flex",justifyContent:"space-between",width:"108%"}}>
                       <h6>{mypics.length} posts</h6>
                       <h6>{state?state.followers.length:"loading.."} followers</h6>
@@ -104,6 +104,7 @@ const Profile=()=>{
             </div>
     </div>
                  </div>
+                 
            <div className="gallery">
                {
                    mypics.map(item=>{
@@ -112,7 +113,8 @@ const Profile=()=>{
                }
                
            </div>
-      
+           <ul>
+           </ul>
       
        </div>
     )

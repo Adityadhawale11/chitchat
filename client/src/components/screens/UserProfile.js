@@ -88,14 +88,14 @@ const Profile=()=>{
             borderBottom:"1px solid grey"
         }}>
             <div>
-               <img style={{width:"160px",height:"160px",borderRadius:"80px"}}
+               <img style={{width:"80px",height:"80px",borderRadius:"40px"}}
                src={userProfile.user.pic}
                />
 
             </div>
             <div>
-               <h4>{userProfile.user.name}</h4>
-               <h5>{userProfile.user.email}</h5>
+               <h5>{userProfile.user.name}</h5>
+               <h6>{userProfile.user.email}</h6>
                <div style={{display:"flex",justifyContent:"space-between",width:"108%"}}>
                    <h6>{userProfile.posts.length} posts</h6>
                    <h6>{userProfile.user.followers.length} followers</h6>
@@ -122,16 +122,24 @@ const Profile=()=>{
                  
             </div>
         </div>
-        
+        <div>
         <div className="gallery">
-            {
+           {
                 userProfile.posts.map(item=>{
                     return(<img key={item._id} className="item" src={item.photo} alt={item.title}/>)
                 })
+
             }
+           
+          
             
+            
+           
         </div>
-   
+        <ul>
+            
+        </ul>
+        </div>
    
     </div>
         
