@@ -44,6 +44,7 @@ const Home=()=>{
         }).catch(err=>{
             console.log(err)
         })
+        window.location.reload(); 
     }
     const unlikePost=(id)=>{
         fetch('/unlike',{
@@ -71,6 +72,8 @@ const Home=()=>{
         }).catch(err=>{
             console.log(err)
         })
+
+        window.location.reload(); 
     }
     const makeComment =(text,postId)=>{
         fetch('/comment',{
@@ -130,7 +133,7 @@ const Home=()=>{
                 >delete</i>}
                </h5>
                 <div className="card=image ">
-                    <img class="responsive-img" src={item.photo}/>
+                    <img className="responsive-img" src={item.photo}/>
 
                 </div>
                 <div className="card-content">
@@ -140,6 +143,7 @@ const Home=()=>{
                 <i className="material-icons"
                 onClick={()=>{unlikePost(item._id)}}
                 >thumb_down</i>
+                
                 
                 :
                 
